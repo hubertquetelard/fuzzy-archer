@@ -356,6 +356,18 @@
                 color = '#FF0000'
                 width = 2
 
+        [[[daytempdewpoint-Bootstrap]]]
+            [[[[outTemp]]]]
+                color = '#0000ff'
+                width = 2
+                label = Temp extérieure
+            [[[[dewPoint]]]]
+                aggregate_type = avg
+                aggregate_interval = 600
+                color = '#FF0000'
+                width = 2
+                label = Pt de rosée
+
         [[[dayrain-Bootstrap]]]
             # Make sure the y-axis increment is at least 0.02 for the rain plot:
             yscale = None, None, 0.2
@@ -367,6 +379,16 @@
                 aggregate_type = sum
                 aggregate_interval = 3600
 #                label = Rain (hourly total)
+
+        [[[dayrainrate-Bootstrap]]]
+            # Make sure the y-axis increment is at least 0.02 for the rain plot:
+            yscale = None, None, 0.2
+            color = '#0080ff'
+            width = 2
+#            label = Temp extérieure
+            [[[[rainRate]]]]
+                aggregate_type = max
+                aggregate_interval = 600
         
         [[[daywind-Bootstrap]]]
             [[[[windSpeed]]]]

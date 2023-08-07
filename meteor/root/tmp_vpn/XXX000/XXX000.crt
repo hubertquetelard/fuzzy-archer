@@ -1,0 +1,84 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            2f:39:4b:74:4b:cb:ea:5f:c7:da:e4:8f:56:73:15:88
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=MeteoR-OI CA
+        Validity
+            Not Before: Mar 30 14:17:29 2019 GMT
+            Not After : Mar 14 14:17:29 2022 GMT
+        Subject: CN=XXX000
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:dd:25:9f:26:c7:4a:2d:58:f0:35:0d:b5:77:d8:
+                    ef:76:be:90:d8:c0:29:f0:bd:e5:f4:ca:b1:2a:6c:
+                    10:59:39:3d:4d:d2:18:1a:99:df:7f:75:a6:50:26:
+                    c8:d0:b3:3a:7f:d8:5c:eb:0e:7d:f6:4b:94:49:d9:
+                    d2:dc:22:e2:8d:1b:00:8d:51:8b:01:d7:72:5d:7e:
+                    54:76:be:7b:c6:04:10:c9:90:f3:cd:b3:18:33:25:
+                    06:b5:b7:10:7f:0c:f7:30:16:2f:38:13:99:ad:ac:
+                    aa:28:d5:c9:d5:60:9b:62:59:a1:52:2b:52:b1:30:
+                    b0:a1:86:63:dd:f3:9b:ce:48:be:ff:91:7a:08:0e:
+                    3b:30:59:79:2e:e4:30:77:64:43:95:68:4a:90:5b:
+                    2a:1d:36:f8:05:32:37:3e:04:02:3c:9b:49:59:6b:
+                    62:83:c5:5b:b5:99:26:e9:c6:e7:9e:ca:cb:6a:de:
+                    3b:88:6f:1e:e7:d0:dc:65:42:7f:99:58:74:2b:44:
+                    a0:a6:47:ac:23:47:a2:37:a4:b7:aa:44:16:d8:46:
+                    e7:a2:99:e0:47:a5:fa:fd:44:f4:b1:b5:12:ed:4f:
+                    4b:f9:71:a7:bf:00:1e:ce:d8:21:29:47:ff:a8:4e:
+                    58:a1:51:32:65:8c:d8:03:8e:07:c4:e2:3b:8b:99:
+                    cb:0f
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                83:6B:65:0D:E8:F4:27:31:52:D8:79:80:2A:4A:7A:B4:80:7D:0F:E8
+            X509v3 Authority Key Identifier: 
+                keyid:33:2F:BA:1C:C2:8A:77:B0:21:98:E5:BA:A8:47:B7:99:81:00:CC:F7
+                DirName:/CN=MeteoR-OI CA
+                serial:F7:87:73:E7:B7:F2:81:C2
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha256WithRSAEncryption
+         a1:9d:1e:7f:e9:0b:5d:94:c5:fb:d0:c5:9c:b7:61:f8:55:cc:
+         2b:81:80:e2:2f:43:12:4b:7b:38:d4:1d:cc:08:40:72:91:08:
+         58:78:93:b2:f0:c6:e6:82:ba:d8:0d:31:de:a9:1b:71:cb:b0:
+         8b:53:6b:9a:87:c2:f6:13:77:56:36:8f:8d:e3:d0:d6:0d:da:
+         f7:33:33:0d:1c:b6:cf:12:a2:cc:f7:06:b7:6b:48:49:35:54:
+         59:6c:e1:e9:36:6e:25:cf:dc:de:e2:f1:ad:24:5a:9b:70:21:
+         60:be:a0:67:20:d3:c2:a3:56:1d:ae:3e:cf:43:61:fb:a5:1b:
+         23:23:7a:eb:74:26:63:d2:29:6b:ee:1f:72:d2:31:f7:ad:dc:
+         24:15:7e:05:22:a8:10:77:92:37:6f:66:e0:f5:5e:01:76:82:
+         64:b2:fe:65:f1:2a:73:3c:b6:45:ee:2a:c1:be:29:65:ac:a6:
+         69:bc:a0:87:08:2d:c9:a5:de:57:7c:18:81:71:3e:16:52:6f:
+         31:ea:27:64:17:4d:d1:c9:3e:e9:c2:a9:f9:db:b0:5f:d1:64:
+         3f:ef:0a:3e:84:7a:2c:ea:0b:75:92:ee:fc:c5:2c:7a:95:fd:
+         b9:42:e1:55:f2:81:5c:3d:82:76:dd:73:54:63:10:49:7e:52:
+         8b:44:4e:d9
+-----BEGIN CERTIFICATE-----
+MIIDSzCCAjOgAwIBAgIQLzlLdEvL6l/H2uSPVnMViDANBgkqhkiG9w0BAQsFADAX
+MRUwEwYDVQQDDAxNZXRlb1ItT0kgQ0EwHhcNMTkwMzMwMTQxNzI5WhcNMjIwMzE0
+MTQxNzI5WjARMQ8wDQYDVQQDDAZYWFgwMDAwggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQDdJZ8mx0otWPA1DbV32O92vpDYwCnwveX0yrEqbBBZOT1N0hga
+md9/daZQJsjQszp/2FzrDn32S5RJ2dLcIuKNGwCNUYsB13JdflR2vnvGBBDJkPPN
+sxgzJQa1txB/DPcwFi84E5mtrKoo1cnVYJtiWaFSK1KxMLChhmPd85vOSL7/kXoI
+DjswWXku5DB3ZEOVaEqQWyodNvgFMjc+BAI8m0lZa2KDxVu1mSbpxueeystq3juI
+bx7n0NxlQn+ZWHQrRKCmR6wjR6I3pLeqRBbYRueimeBHpfr9RPSxtRLtT0v5cae/
+AB7O2CEpR/+oTlihUTJljNgDjgfE4juLmcsPAgMBAAGjgZgwgZUwCQYDVR0TBAIw
+ADAdBgNVHQ4EFgQUg2tlDej0JzFS2HmAKkp6tIB9D+gwRwYDVR0jBEAwPoAUMy+6
+HMKKd7AhmOW6qEe3mYEAzPehG6QZMBcxFTATBgNVBAMMDE1ldGVvUi1PSSBDQYIJ
+APeHc+e38oHCMBMGA1UdJQQMMAoGCCsGAQUFBwMCMAsGA1UdDwQEAwIHgDANBgkq
+hkiG9w0BAQsFAAOCAQEAoZ0ef+kLXZTF+9DFnLdh+FXMK4GA4i9DEkt7ONQdzAhA
+cpEIWHiTsvDG5oK62A0x3qkbccuwi1NrmofC9hN3VjaPjePQ1g3a9zMzDRy2zxKi
+zPcGt2tISTVUWWzh6TZuJc/c3uLxrSRam3AhYL6gZyDTwqNWHa4+z0Nh+6UbIyN6
+63QmY9Ipa+4fctIx963cJBV+BSKoEHeSN29m4PVeAXaCZLL+ZfEqczy2Re4qwb4p
+ZaymabyghwgtyaXeV3wYgXE+FlJvMeonZBdN0ck+6cKp+duwX9FkP+8KPoR6LOoL
+dZLu/MUsepX9uULhVfKBXD2Cdt1zVGMQSX5Si0RO2Q==
+-----END CERTIFICATE-----

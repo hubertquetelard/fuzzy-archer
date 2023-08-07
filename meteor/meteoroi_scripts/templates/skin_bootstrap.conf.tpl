@@ -277,6 +277,10 @@
         [[[JSON]]]
             encoding = utf8
             template = json/daily.json.tmpl
+        # added by QUETELARD
+        [[[JSON2]]]
+            encoding = utf8
+            template = json/obs.{{ station_id|default('XXX000') }}.YYYY-MM-DDTHH-mm.json.tmpl
 
     [[HTMLFiles]]
         #
