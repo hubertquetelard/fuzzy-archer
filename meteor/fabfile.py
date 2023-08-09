@@ -30,8 +30,8 @@ def initUserHost(c):
 def test(c):
     today = datetime.now()
     today_string = today.strftime('%m%d%Y')
-    print today_string
-    print c.get('station')
+    print(today_string)
+    print(c.get('station'))
     c.run("env", env={'STATION_ID': c.station.id})
     # Replaces {{ datestring|escape }} in the template with a date string.
 #    upload_template('/path/to/local_dir/setup.py.jinja', 

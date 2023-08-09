@@ -87,6 +87,15 @@ with open(JSON_SKIN_CFG_FILE, "w") as rendered_file:
 #with open(TEST_FILE, "w") as rendered_file:
     rendered_file.write(output_cfg)
 
+# Render wu-meteoroi.conf
+print("Rendering wu-meteoroi.conf.tpl")
+output_cfg = tpl_wuimpconf.render(conf)
+WU_IMPORT_CFG_FILE = os.path.join(WU_IMPORT_ROOT, WU_IMPORT_CFG_FILE_NAME)
+with open(WU_IMPORT_CFG_FILE, "w") as rendered_file:
+#TEST_FILE = os.path.join(SCRIPT_PATH, 'test_wuimp.conf')
+#with open(TEST_FILE, "w") as rendered_file:
+    rendered_file.write(output_cfg)
+
 exit()
 
 

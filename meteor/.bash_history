@@ -216,3 +216,72 @@ vim rasp06_setup_weewx.py
 ls -l templates
 vim rasp06_setup_weewx.py
 exit
+ls
+cd meteoroi_scripts/templates
+ls -l
+ls -l ..
+ls -l
+vim fabfile.py
+cd root
+ls -l
+cd
+ls -l
+ls -l meteoroi_scripts
+vim rasp00_bootstrap.py
+vim meteoroi_scripts/rasp00_bootstrap.py
+ls -l
+python fabfile.py
+pip install fabric2
+python fabfile.py
+pip3 install fabric2
+pip -U install pi
+pip -U install pip
+pip install -U pip
+pip3 install fabric2
+apt-get install fabric2
+sudo apt-get install fabric2
+sudo apt-get install fabric
+python fabfile.py
+pip3 install fabric2
+python fabfile.py
+env
+pip uninstall fabric2
+sudo pip install fabric2
+ls -l
+ls -l meteoroi_scripts
+cd scripts_meteoroi
+cd meteoroi_scripts
+ls -l
+./rasp01_change_hostname.sh
+sudo ./rasp01_change_hostname.sh
+./rasp05_init_db_access.sh
+mysql -u root
+sudo mysql -u root
+mysql -u root -p6DI+mrlnTW
+./rasp05_init_db_access.sh
+echo "CREATE DATABASE IF NOT EXISTS weewx_${STATION_ID};
+CREATE USER IF NOT EXISTS 'weewx'@'localhost';
+SET PASSWORD FOR 'weewx'@'localhost' = PASSWORD('J_Gs_irG_W');
+SET PASSWORD FOR 'meteor'@'localhost' = PASSWORD('${STATION_ID}-p455');
+GRANT ALL PRIVILEGES ON weewx_${STATION_ID}.* TO 'weewx'@'localhost';
+FLUSH PRIVILEGES;" | mysql -u root -p6DI+mrlnTW
+mysql -u root -p6DI+mrlnTW
+echo "CREATE DATABASE IF NOT EXISTS weewx_${STATION_ID};
+CREATE USER IF NOT EXISTS 'weewx'@'localhost';
+SET PASSWORD FOR 'weewx'@'localhost' = PASSWORD('J_Gs_irG_W');
+SET PASSWORD FOR 'meteor'@'localhost' = PASSWORD('${STATION_ID}-p455');
+GRANT ALL PRIVILEGES ON weewx_${STATION_ID}.* TO 'weewx'@'localhost';
+FLUSH PRIVILEGES;" | mysql -u root -p6DI+mrlnTW
+./rasp05_init_db_access.sh
+ls -l
+./rasp06_setup_weewx.py
+sudo pip3 install jinja
+sudo pip3 install jinja2
+./rasp06_setup_weewx.py
+python3 ./rasp06_setup_weewx.py
+exit
+ls -l 
+cd meteoroi_scripts
+ls -l
+ls -l templates
+ls -l

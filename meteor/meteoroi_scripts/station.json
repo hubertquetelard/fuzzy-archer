@@ -2,7 +2,7 @@
     "weewx_user"   : "weewx",
 
     "station_id"   : "MTG320",
-    "location"     : "La Montagne / Brises",
+    "location"     : "Les Brises / La Montagne",
     "latitude"     : "-20.88",
     "longitude"    : "55.428",
     "altitude"     : 318,
@@ -10,8 +10,8 @@
 
     "Wunderground" : {
         "enable"       : "true",
-        "station"      : "ISAINT168",
-        "password"     : "8J43uvhW"
+        "station"      : "ISAINT2499",
+        "password"     : "ae2xSM5D"
     },
 
     "database"     : {
