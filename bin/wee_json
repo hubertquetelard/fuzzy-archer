@@ -18,7 +18,6 @@ import syslog
 import sys
 from time import mktime
 
-
 import user.extensions #@UnusedImport
 import weewx.station
 import weewx.reportengine
