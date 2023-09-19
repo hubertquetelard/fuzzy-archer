@@ -424,68 +424,70 @@
                 color = '#fb8b03'
                 width = 2
 {% endif %}
-    [[week_images]]
-        x_label_format = %d
-        bottom_label_format = %d/%m/%y %Hh%M
-        time_length = 604800    # == 7 days
+[[week_images]]
+x_label_format = %d
+bottom_label_format = %d/%m/%y %Hh%M
+time_length = 604800    # == 7 days
+aggregate_type = avg
+aggregate_interval = 1800    # == 30 minutes
+
+[[[weekbarometer-Bootstrap]]]
+    [[[[barometer]]]]
+        color = '#58c531'
+        width = 2
+
+[[[weekhumidity-Bootstrap]]]
+    [[[[outHumidity]]]]
+        color = '#7401df'
+        width = 2
+
+[[[weektempchill-Bootstrap]]]
+    [[[[outTemp]]]]
+        color = '#0000ff'
+        width = 2
+        label = Temp extérieure
+    [[[[heatindex]]]]
         aggregate_type = avg
-        aggregate_interval = 1800
+        aggregate_interval = 600
+        color = '#FF0000'
+        width = 2
 
-        [[[weekbarometer-Bootstrap]]]
-            [[[[barometer]]]]
-                color = '#58c531'
-                width = 2
+[[[weekrain-Bootstrap]]]
+    # Make sure the y-axis increment is at least 0.02 for the rain plot:
+    yscale = None, None, 0.2
+    plot_type = bar
+    chart_line_colors = '#000000', '#000000', '#000000'
+    chart_fill_colors = '#0080ff', '#0080ff', '#0080ff'
+    chart_line_width = 2, 2, 2
+    [[[[rain]]]]
+        aggregate_type = sum
+        aggregate_interval = 21600 #43200
+        label = Précipitations
 
-        [[[weekhumidity-Bootstrap]]]
-            [[[[outHumidity]]]]
-                color = '#7401df'
-                width = 2
+[[[weekwind-Bootstrap]]]
+    [[[[windSpeed]]]]
+        color = '#0000ff'
+        width = 2
+        label = Vent
+    [[[[windGust]]]]
+        aggregate_type = max
+        aggregate_interval = 1800    # == 30 minutes
+        color = '#ff0000'
+        width = 2
+        label = Rafale
 
-        [[[weektempchill-Bootstrap]]]
-            [[[[outTemp]]]]
-                color = '#0000ff'
-                width = 2
-                label = Temp extérieure
-            [[[[heatindex]]]]
-                aggregate_type = avg
-                aggregate_interval = 600
-                color = '#FF0000'
-                width = 2
-        
-        [[[weekrain-Bootstrap]]]
-            # Make sure the y-axis increment is at least 0.02 for the rain plot:
-            yscale = None, None, 0.2
-            plot_type = bar
-            chart_line_colors = '#000000', '#000000', '#000000'
-            chart_fill_colors = '#0080ff', '#0080ff', '#0080ff'
-            chart_line_width = 2, 2, 2
-            [[[[rain]]]]
-                aggregate_type = sum
-                aggregate_interval = 43200
-                label = Précipitations
-        
-        [[[weekwind-Bootstrap]]]
-            [[[[windSpeed]]]]
-                color = '#0000ff'
-                width = 2
-                label = Vent
-            [[[[windGust]]]]
-                color = '#ff0000'
-                width = 2
-                label = Rafale
-        
-        [[[weekwinddir-Bootstrap]]]
-            # Hardwire in the y-axis scale for wind direction:
-            yscale = 0.0, 360.0, 45.0
-            # Don't join lines
-            # Type of line. Only 'solid' or 'none' is offered now
-            line_type = 'none'
-            # Size of marker in pixels
-            marker_size = 6
-            # Type of marker. Pick one of 'cross', 'x', 'circle', 'box', or 'none'
-            marker_type ='cross'
-            [[[[windDir]]]]
-                color = '#000000'
+[[[weekwinddir-Bootstrap]]]
+    # Hardwire in the y-axis scale for wind direction:
+    yscale = 0.0, 360.0, 45.0
+    # Don't join lines
+    # Type of line. Only 'solid' or 'none' is offered now
+    line_type = 'none'
+    # Size of marker in pixels
+    marker_size = 6
+    # Type of marker. Pick one of 'cross', 'x', 'circle', 'box', or 'none'
+    marker_type ='cross'
+    [[[[windDir]]]]
+        color = '#000000'
 {% if display.radiation == "enable" %}
         [[[weekradiation-Bootstrap]]]
             [[[[radiation]]]]
@@ -498,69 +500,71 @@
                 color = '#fb8b03'
                 width = 2
 {% endif %}
-    [[month_images]]
-        x_label_format = %d
-        bottom_label_format = %d/%m/%y %H:%M
-        time_length = 2592000    # == 30 days
+[[month_images]]
+x_label_format = %d
+bottom_label_format = %d/%m/%y %H:%M
+time_length = 2592000    # == 30 days
+aggregate_type = avg
+aggregate_interval = 10800    # == 3 hours
+show_daynight = false
+
+[[[monthbarometer-Bootstrap]]]
+    [[[[barometer]]]]
+        color = '#58c531'
+        width = 2
+
+[[[monthhumidity-Bootstrap]]]
+    [[[[outHumidity]]]]
+        color = '#7401df'
+        width = 2
+
+[[[monthtempchill-Bootstrap]]]
+    [[[[outTemp]]]]
+        color = '#0000ff'
+        width = 2
+        label = Temp extérieure
+    [[[[heatindex]]]]
         aggregate_type = avg
-        aggregate_interval = 10800    # == 3 hours
-        show_daynight = false
+        aggregate_interval = 600
+        color = '#FF0000'
+        width = 2
 
-        [[[monthbarometer-Bootstrap]]]
-            [[[[barometer]]]]
-                color = '#58c531'
-                width = 2
+[[[monthrain-Bootstrap]]]
+    # Make sure the y-axis increment is at least 0.02 for the rain plot:
+    yscale = None, None, 0.2
+    plot_type = bar
+    chart_line_colors = '#000000', '#000000', '#000000'
+    chart_fill_colors = '#0080ff', '#0080ff', '#0080ff'
+    chart_line_width = 2, 2, 2
+    [[[[rain]]]]
+        aggregate_type = sum
+        aggregate_interval = 86400 
+        label = Précipitations
 
-        [[[monthhumidity-Bootstrap]]]
-            [[[[outHumidity]]]]
-                color = '#7401df'
-                width = 2
+[[[monthwind-Bootstrap]]]
+    [[[[windSpeed]]]]
+        color = '#0000ff'
+        width = 2
+        label = Vent
+    [[[[windGust]]]]
+        aggregate_type = max
+        aggregate_interval = 10800  # == 3 hours
+        color = '#ff0000'
+        width = 2
+        label = Rafale
 
-        [[[monthtempchill-Bootstrap]]]
-            [[[[outTemp]]]]
-                color = '#0000ff'
-                width = 2
-                label = Temp extérieure
-            [[[[heatindex]]]]
-                aggregate_type = avg
-                aggregate_interval = 600
-                color = '#FF0000'
-                width = 2
-        
-        [[[monthrain-Bootstrap]]]
-            # Make sure the y-axis increment is at least 0.02 for the rain plot:
-            yscale = None, None, 0.2
-            plot_type = bar
-            chart_line_colors = '#000000', '#000000', '#000000'
-            chart_fill_colors = '#0080ff', '#0080ff', '#0080ff'
-            chart_line_width = 2, 2, 2
-            [[[[rain]]]]
-                aggregate_type = sum
-                aggregate_interval = 86400 
-                label = Précipitations
-        
-        [[[monthwind-Bootstrap]]]
-            [[[[windSpeed]]]]
-                color = '#0000ff'
-                width = 2
-                label = Vent
-            [[[[windGust]]]]
-                color = '#ff0000'
-                width = 2
-                label = Rafale
-        
-        [[[monthwinddir-Bootstrap]]]
-            # Hardwire in the y-axis scale for wind direction:
-            yscale = 0.0, 360.0, 45.0
-            # Don't join lines
-            # Type of line. Only 'solid' or 'none' is offered now   
-	         line_type = 'none'
-            # Size of marker in pixels
-            marker_size = 6
-	         # Type of marker. Pick one of 'cross', 'x', 'circle', 'box', or 'none'
-            marker_type ='cross'
-            [[[[windDir]]]]        
-                color = '#000000'
+[[[monthwinddir-Bootstrap]]]
+    # Hardwire in the y-axis scale for wind direction:
+    yscale = 0.0, 360.0, 45.0
+    # Don't join lines
+    # Type of line. Only 'solid' or 'none' is offered now   
+     line_type = 'none'
+    # Size of marker in pixels
+    marker_size = 6
+     # Type of marker. Pick one of 'cross', 'x', 'circle', 'box', or 'none'
+    marker_type ='cross'
+    [[[[windDir]]]]        
+        color = '#000000'
 
 {% if display.radiation == "enable" %}
         [[[monthradiation-Bootstrap]]]
@@ -574,71 +578,73 @@
                 color = '#fb8b03'
                 width = 2
 {% endif %}
-    [[year_images]]
-        x_label_format = %m/%y
-        bottom_label_format = %d/%m/%y
-        time_length = 31536000    # == 365 days
-        aggregate_type = avg
-        aggregate_interval = 86400
-        show_daynight = false
+[[year_images]]
+x_label_format = %m/%y
+bottom_label_format = %d/%m/%y
+time_length = 31536000    # == 365 days
+aggregate_type = avg
+aggregate_interval = 86400
+show_daynight = false
 
-        [[[yearbarometer-Bootstrap]]]
-            [[[[barometer]]]]
-                color = '#58c531'
-                width = 2
+[[[yearbarometer-Bootstrap]]]
+    [[[[barometer]]]]
+        color = '#58c531'
+        width = 2
 
-        [[[yearhumidity-Bootstrap]]]
-            [[[[outHumidity]]]]
-                color = '#7401df'
-                width = 2
+[[[yearhumidity-Bootstrap]]]
+    [[[[outHumidity]]]]
+        color = '#7401df'
+        width = 2
 
-        [[[yeartempmaxmin-Bootstrap]]]
-            [[[[min_outTemp]]]]
-                data_type = outTemp
-                aggregate_type = min
-                label = Min
-                color = '#0000ff'
-                width = 2
-            [[[[outTemp]]]]
-                aggregate_type = max
-                label = Max
-                color = '#ff0000'
-                width = 2
-        
-        [[[yearrain-Bootstrap]]]
-            # Make sure the y-axis increment is at least 0.02 for the rain plot:
-            yscale = None, None, 0.2
-            plot_type = bar
-            chart_line_colors = '#0080ff', '#0080ff', '#0080ff'
-            chart_fill_colors = '#0080ff', '#0080ff', '#0080ff'
-            chart_line_width = 2, 2, 2
-            [[[[rain]]]]
-                aggregate_type = sum
-                aggregate_interval = 86400 
-                label = Précipitations
-        
-        [[[yearwind-Bootstrap]]]
-            [[[[windSpeed]]]]
-                color = '#0000ff'
-                width = 2
-                label = Vent
-            [[[[windGust]]]]
-                color = '#ff0000'
-                width = 2
-                label = Rafale
-        
-        [[[yearwinddir-Bootstrap]]]
-            # Hardwire in the y-axis scale for wind direction:
-            yscale = 0.0, 360.0, 45.0
-            # Don't join lines
-            # Type of line. Only 'solid' or 'none' is offered now   
-            line_type = 'none'
-            # Size of marker in pixels
-            marker_size = 6
-            # Type of marker. Pick one of 'cross', 'x', 'circle', 'box', or 'none'
-            marker_type ='cross'
-            [[[[windDir]]]] 
-                color = '#000000'
+[[[yeartempmaxmin-Bootstrap]]]
+    [[[[min_outTemp]]]]
+        data_type = outTemp
+        aggregate_type = min
+        label = Min
+        color = '#0000ff'
+        width = 2
+    [[[[outTemp]]]]
+        aggregate_type = max
+        label = Max
+        color = '#ff0000'
+        width = 2
+
+[[[yearrain-Bootstrap]]]
+    # Make sure the y-axis increment is at least 0.02 for the rain plot:
+    yscale = None, None, 0.2
+    plot_type = bar
+    chart_line_colors = '#0080ff', '#0080ff', '#0080ff'
+    chart_fill_colors = '#0080ff', '#0080ff', '#0080ff'
+    chart_line_width = 2, 2, 2
+    [[[[rain]]]]
+        aggregate_type = sum
+        aggregate_interval = 86400 
+        label = Précipitations
+
+[[[yearwind-Bootstrap]]]
+    [[[[windSpeed]]]]
+        color = '#0000ff'
+        width = 2
+        label = Vent
+    [[[[windGust]]]]
+        aggregate_type = max
+        aggregate_interval = 86400  # == 1 day
+        color = '#ff0000'
+        width = 2
+        label = Rafale
+
+[[[yearwinddir-Bootstrap]]]
+    # Hardwire in the y-axis scale for wind direction:
+    yscale = 0.0, 360.0, 45.0
+    # Don't join lines
+    # Type of line. Only 'solid' or 'none' is offered now   
+    line_type = 'none'
+    # Size of marker in pixels
+    marker_size = 6
+    # Type of marker. Pick one of 'cross', 'x', 'circle', 'box', or 'none'
+    marker_type ='cross'
+    [[[[windDir]]]] 
+        color = '#000000'
 {% if display.radiation == "enable" %}
         [[[yearradiation-Bootstrap]]]
             plot_type = bar

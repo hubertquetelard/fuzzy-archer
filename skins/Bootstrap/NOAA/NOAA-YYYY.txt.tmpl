@@ -38,6 +38,9 @@
 #set $Soak     =(3.0,"cm")
 #set $Rain="%6.2f"
 #end if
+#set $Wind48   =(  48.0, "km_per_hour", "group_speed")
+#set $Wind65   =(  65.0, "km_per_hour", "group_speed")
+#set $Wind100  =( 100.0, "km_per_hour", "group_speed")
 #def ShowInt($T)
 $("%6d" % $T[0])#slurp
 #end def
@@ -87,15 +90,16 @@ $month.dateTime.format($YM)
 
            WIND SPEED ($unit.label.windSpeed.strip())
 
-                                DOM
- YR  MO    AVG     HI   DATE    DIR
------------------------------------
+                                        --------DAYS OF MAX WIND---------
+                                DOM                  OVER    
+ YR  MO    AVG     HI   DATE    Dir     $ShowFloat($Wind48)      $ShowFloat($Wind65)       $ShowFloat($Wind100)
+-------------------------------------------------------------------------
 #for $month in $year.months
 #if $month.barometer.count.raw
-$month.dateTime.format($YM) $month.wind.avg.nolabel($Wind,$NONE) $month.wind.max.nolabel($Wind,$NONE)   $month.wind.maxtime.format($D,$NODAY) $month.wind.vecdir.nolabel($Dir,$NONE) 
+$month.dateTime.format($YM) $month.wind.avg.nolabel($Wind,$NONE) $month.wind.max.nolabel($Wind,$NONE)   $month.wind.maxtime.format($D,$NODAY) $month.wind.vecdir.nolabel($Dir,$NONE)     $month.windGust.max_ge($Wind48).nolabel($Count,$NONE)    $month.windGust.max_ge($Wind65).nolabel($Count,$NONE)    $month.windGust.max_ge($Wind100).nolabel($Count,$NONE)
 #else
 $month.dateTime.format($YM)
 #end if
 #end for
------------------------------------
-        $year.wind.avg.nolabel($Wind,$NONE) $year.wind.max.nolabel($Wind,$NONE)   $year.wind.maxtime.format($M,$NODAY) $year.wind.vecdir.nolabel($Dir,$NONE)
+-------------------------------------------------------------------------
+        $year.wind.avg.nolabel($Wind,$NONE) $year.wind.max.nolabel($Wind,$NONE)   $year.wind.maxtime.format($M,$NODAY) $year.wind.vecdir.nolabel($Dir,$NONE)    $year.windGust.max_ge($Wind48).nolabel($Count,$NONE)    $year.windGust.max_ge($Wind65).nolabel($Count,$NONE)    $year.windGust.max_ge($Wind100).nolabel($Count,$NONE)
