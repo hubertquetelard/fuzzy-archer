@@ -459,12 +459,10 @@ LOW#slurp
        $CleDat("etp_min_time",$day($days_ago=$delta_d).ET.mintime.raw)
 #end if
 #if $day($days_ago=$delta_d).radiation.has_data
-       $CleCal("radiation_max",$day($days_ago=$delta_d).radiation.max.raw,0.0001)
-       $CleDat("radiation_max_time",$day($days_ago=$delta_d).radiation.maxtime.raw)
+       $CleCal("radiation_rate_max",$day($days_ago=$delta_d).radiation.max.raw,0.0001)
+       $CleDat("radiation_rate_max_time",$day($days_ago=$delta_d).radiation.maxtime.raw)
        $CleCal("radiation_s",$day($days_ago=$delta_d).radiation.sum.raw,$amin*0.006)
        $CleCal("radiation_d",$day($days_ago=$delta_d).radiation.count.raw,$amin)
-       $CleCal("radiation_min",$day($days_ago=$delta_d).radiation.min.raw,0.0001)
-       $CleDat("radiation_min_time",$day($days_ago=$delta_d).radiation.mintime.raw)
 #end if
 #if $day($days_ago=$delta_d).rxCheckPercent.has_data
        $CleVal("rx_max",$day($days_ago=$delta_d).rxCheckPercent.max.raw)
@@ -701,10 +699,8 @@ LOW#slurp
        $CleDat("etp_min_time",$day($days_ago=$delta_d).ET.mintime.raw)
 #end if
 #if $day($days_ago=$delta_d).radiation.has_data
-       $CleCal("radiation_max",$day($days_ago=$delta_d).radiation.max.raw,0.0001)
-       $CleDat("radiation_max_time",$day($days_ago=$delta_d).radiation.maxtime.raw)
-       $CleCal("radiation_min",$day($days_ago=$delta_d).radiation.min.raw,0.0001)
-       $CleDat("radiation_min_time",$day($days_ago=$delta_d).radiation.mintime.raw)
+       $CleCal("radiation_rate_max",$day($days_ago=$delta_d).radiation.max.raw,0.0001)
+       $CleDat("radiation_rate_max_time",$day($days_ago=$delta_d).radiation.maxtime.raw)
 #end if
 #if $day($days_ago=$delta_d).rxCheckPercent.has_data
        $CleVal("rx_max",$day($days_ago=$delta_d).rxCheckPercent.max.raw)
